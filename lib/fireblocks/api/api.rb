@@ -9,7 +9,7 @@ module Fireblocks
       end
 
       def create_vault_account(name:, hidden_on_ui: false)
-        body = { name: name, hiddenOnUi: hidden_on_ui }
+        body = { name: name, hiddenOnUI: hidden_on_ui }
         Request.post(body: body, path: '/v1/vault/accounts')
       end
 
