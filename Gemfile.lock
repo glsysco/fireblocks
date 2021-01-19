@@ -39,7 +39,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  bundler (~> 1.17)
+  bundler (~> 1.17.3)
   fireblocks!
   minitest (~> 5.0)
   pry-byebug
