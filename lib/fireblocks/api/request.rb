@@ -72,9 +72,9 @@ module Fireblocks
 
     def valid_response!(req_response)
       resp = JSON.parse(req_response.body)
-      return resp if req_response.message == 'OK'
+      return resp if %w[OK Created].include?(req_response.message)
 
-      raise Error, resp
+      raise Error, { code: req_response.code, message: req_response.message }
     end
   end
 end

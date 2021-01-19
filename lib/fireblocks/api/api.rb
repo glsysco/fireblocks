@@ -24,6 +24,14 @@ module Fireblocks
         )
       end
 
+      def hide_vault_account(id)
+        Request.post(path: "/v1/vault/accounts/#{id}/hide", body: {})
+      end
+
+      def unhide_vault_account(id)
+        Request.post(path: "/v1/vault/accounts/#{id}/unhide", body: {})
+      end
+
       def get_vault_account_asset(vault_account_id, asset_id)
         Request.get(path: "/v1/vault/accounts/#{vault_account_id}/#{asset_id}")
       end
