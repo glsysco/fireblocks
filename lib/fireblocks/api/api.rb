@@ -8,8 +8,8 @@ module Fireblocks
         Request.get(path: '/v1/vault/accounts')
       end
 
-      def create_vault_account(name:, hidden_on_ui: false)
-        body = { name: name, hiddenOnUI: hidden_on_ui }
+      def create_vault_account(name:, hidden_on_ui: false, auto_fuel: false)
+        body = { name: name, hiddenOnUI: hidden_on_ui, autoFuel: auto_fuel }
         Request.post(body: body, path: '/v1/vault/accounts')
       end
 
