@@ -80,11 +80,11 @@ module Fireblocks
         end
 
         def from_vault_to_vault(
-          amount:,
-          asset_id:,
-          source_id:,
-          destination_id:
-        )
+            amount:, 
+            asset_id:, 
+            source_id:, 
+            destination_id:
+          )
           body = {
             amount: amount,
             assetId: asset_id,
@@ -99,6 +99,11 @@ module Fireblocks
           }
           create(body)
         end
+
+        def get_transaction_by_id(tx_id)
+          Request.get(path: "/v1/transactions/#{tx_id}")
+        end
+
       end
     end
   end
