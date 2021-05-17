@@ -104,7 +104,7 @@ module Fireblocks
         def invest_coumpound(
           amount:, 
           asset_id:, 
-          source_id:, 
+          source_id: 
           # destination_id:
         )
         body = {
