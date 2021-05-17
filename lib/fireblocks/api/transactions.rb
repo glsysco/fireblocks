@@ -118,7 +118,6 @@ module Fireblocks
               type: 'COMPOUND'
             },
             operation: 'SUPPLY_TO_COMPOUND'
-            }
           }
           create(body)
         end
