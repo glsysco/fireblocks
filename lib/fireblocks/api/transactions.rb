@@ -121,7 +121,6 @@ module Fireblocks
           }
           create(body)
         end
-      end
 
         def get_transaction_by_id(tx_id)
           Request.get(path: "/v1/transactions/#{tx_id}")
