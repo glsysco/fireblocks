@@ -15,6 +15,7 @@ module Fireblocks
           autoStaking
           networkStaking
           cpuStaking
+          operation
         ].freeze
 
         def create(options)
@@ -99,6 +100,28 @@ module Fireblocks
           }
           create(body)
         end
+
+        def invest_coumpound(
+          amount:, 
+          asset_id:, 
+          source_id:, 
+          # destination_id:
+        )
+        body = {
+          amount: amount,
+          assetId: asset_id,
+          source: {
+            type: 'VAULT_ACCOUNT',
+            id: source_id
+          },
+          destination: {
+            type: 'COMPOUND'
+          },
+          operation: 'SUPPLY_TO_COMPOUND'
+          }
+        }
+        create(body)
+      end
 
         def get_transaction_by_id(tx_id)
           Request.get(path: "/v1/transactions/#{tx_id}")
