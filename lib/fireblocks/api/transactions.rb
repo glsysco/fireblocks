@@ -101,11 +101,10 @@ module Fireblocks
           create(body)
         end
 
-        def invest_coumpound(
+        def from_vault_to_coumpound(
             amount:, 
             asset_id:, 
             source_id: 
-            # destination_id:
           )
           body = {
             amount: amount,
